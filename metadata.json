@@ -1,0 +1,6 @@
+{
+  "name": "Time Studio",
+  "description": "A visual, technical and minimalist lunar chronometer and time exploration tool with real-time astronomical clock, customizable lunar calendar generator, synodic phase calculations, HD to 8K exports, and ambient soundscapes.",
+  "requestFramePermissions": ["notifications"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

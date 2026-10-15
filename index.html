@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Time Studio</title>
+    <meta name="description" content="A visual, technical and minimalist lunar chronometer and time exploration tool with real-time astronomical clock, customizable lunar calendar generator, synodic phase calculations, HD to 8K exports, and ambient soundscapes." />
+    <meta property="og:title" content="Time Studio" />
+    <meta property="og:description" content="A visual, technical and minimalist lunar chronometer and time exploration tool with real-time astronomical clock, customizable lunar calendar generator, synodic phase calculations, HD to 8K exports, and ambient soundscapes." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="theme-color" content="#0A0A0A" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=TASA+Orbiter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  </head>
+  <body class="bg-[#0A0A0A] text-[#FFFFFF] antialiased overflow-hidden selection:bg-[#2E2E2E] selection:text-white">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+    <script>
+      if ('serviceWorker' in navigator && window.location.protocol.startsWith('http')) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/sw.js').catch(() => {});
+        });
+      }
+    </script>
+  </body>
+</html>
+

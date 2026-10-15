@@ -1,0 +1,148 @@
+@font-face {
+  font-family: 'Mona';
+  src: url('https://media.brand.dev/fonts/c8847174a74b389b8484715048111f028ae383e0bc702d0bcf6fbfffa23b742c.woff2') format('woff2');
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: '__mona_d9e1c7';
+  src: url('https://media.brand.dev/fonts/c8847174a74b389b8484715048111f028ae383e0bc702d0bcf6fbfffa23b742c.woff2') format('woff2');
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+:root {
+  /* WebGL / Creative-tool Dark Minimalist Palette */
+  --background: #0A0A0A;
+  --layer: #0A0A0A;
+  --surface: #0A0A0A;
+  --surface-card: #0A0A0A;
+  --surface-control: #171717;
+  --surface-control-hover: #1E1E1E;
+  --surface-elevated: #171717;
+  --surface-deep: #0A0A0A;
+  --surface-deepest: #000000;
+  --foreground: #FFFFFF;
+  --foreground-feint: #888888;
+  --foreground-value: #E5E5E5;
+  --secondary: #E5E5E5;
+  --muted: #888888;
+  --border: #1F1F1F;
+  --border-focus: #444444;
+  --border-subtle: rgba(255, 255, 255, 0.04);
+  
+  /* Creative Tool Specific Tokens */
+  --panel-bg: #0A0A0A;
+  --panel-border: #1F1F1F;
+  --panel-radius: 18px;
+  --panel-padding: 16px;
+  --control-bg: #171717;
+  --control-hover: #1E1E1E;
+  --control-height: 32px;
+  --control-radius: 8px;
+  --slider-track: #2E2E2E;
+  --slider-ticks: #3D3D3D;
+  --toggle-off: #2E2E2E;
+  --toggle-on: #E5E5E5;
+  --label-color: #FFFFFF;
+  --value-color: #E5E5E5;
+  --muted-color: #888888;
+  
+  /* Motion accents */
+  --accent: #e8eeee;
+  --accent-rind: oklch(0.76 0.15 155);
+  --accent-2: oklch(0.76 0.15 155);
+  --accent-3: #a5b4fc;
+  --accent-yellow: oklch(0.88 0.18 96);
+  --accent-blueberry: oklch(0.68 0.18 255);
+  --track: #1e2427;
+  
+  /* MotionScore Tiers */
+  --tier-s: oklch(0.88 0.18 96);
+  --tier-s-bg: color-mix(in oklch, oklch(0.88 0.18 96) 12%, transparent);
+  --tier-a: oklch(0.76 0.15 155);
+  --tier-a-bg: color-mix(in oklch, oklch(0.76 0.15 155) 12%, transparent);
+  --tier-b: oklch(0.68 0.18 255);
+  --tier-b-bg: color-mix(in oklch, oklch(0.68 0.18 255) 12%, transparent);
+  --tier-c: oklch(0.64 0.18 302);
+  --tier-c-bg: color-mix(in oklch, oklch(0.64 0.18 302) 12%, transparent);
+  --tier-d: oklch(0.72 0.2 345);
+  --tier-d-bg: color-mix(in oklch, oklch(0.72 0.2 345) 12%, transparent);
+  --tier-f: oklch(0.67 0.22 26.43);
+  --tier-f-bg: color-mix(in oklch, oklch(0.67 0.22 26.43) 12%, transparent);
+  
+  /* Dossier stripes */
+  --dossier-stripe-angle: 119deg;
+  --dossier-stripe-color: color-mix(in srgb, var(--foreground) 12%, transparent);
+  --dossier-stripe-stroke: 1.5px;
+  --dossier-stripe-period: 8px;
+
+  /* Typography */
+  --font-ui: "TASA Orbiter", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-display: "TASA Orbiter", "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: "Geist Mono", "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  
+  --radius-xs: 3px;
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --radius-panel: 16px;
+  --radius-full: 9999px;
+  
+  --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 12px 32px rgba(0, 0, 0, 0.6);
+  --shadow-inner: rgba(255, 255, 255, 0.05) 0px -1px 4px 1px inset, rgba(255, 255, 255, 0.15) 0px 1px 1px 0px inset;
+
+  --control-height-sm: 30px;
+  --control-height-md: 38px;
+  --control-height-lg: 46px;
+}
+
+/* Light mode overrides if selected */
+.theme-light, .light-theme {
+  --background: #f7f9f9;
+  --layer: #ffffff;
+  --surface: #ffffff;
+  --surface-card: #ffffff;
+  --surface-control: #eef2f2;
+  --surface-control-hover: #e5ecec;
+  --surface-elevated: #f0f4f4;
+  --surface-deep: #e8edee;
+  --surface-deepest: #dfe5e6;
+  --foreground: #0d1111;
+  --foreground-feint: #616a6a;
+  --secondary: #4a5454;
+  --muted: #727c7c;
+  --border: #d7e0e0;
+  --border-focus: #8b9999;
+  --border-subtle: rgba(0, 0, 0, 0.08);
+  --accent: #0d1111;
+  --dossier-stripe-color: color-mix(in srgb, var(--foreground) 8%, transparent);
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+/* Tabular figures for numbers */
+.font-tabular {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Smooth micro-interactions */
+.trans-standard {
+  transition: all 180ms cubic-bezier(0.16, 1, 0.3, 1);
+}
